@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0c10;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #ff6600; /* Basketball Orange */
+}
+
+nav a {
+    color: #aaaaaa;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #ff6600;
+}
+
+/* Hero Section */
+.hub-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.welcome-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.welcome-hero h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #ffffff, #ff6600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-hero p {
+    color: #888888;
+    font-size: 1.2rem;
+}
+
+/* Grid Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: #1f2833;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff6600;
+}
+
+.skill-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+.skill-card p {
+    color: #c5c6c7;
+    line-height: 1.5;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #0b0c10;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 5%;
+    margin-top: 80px;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns top items across the flex container */
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Left Side Alignment */
+.footer-credits {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-credits .copyright {
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.footer-credits .partnership {
+    color: #aaaaaa;
+    line-height: 1.5;
+}
+
+.footer-credits strong {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.brand-highlight {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* Right Side: Contact Directory Alignment */
+.footer-contact-directory {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align all text within column neatly to the left */
+}
+
+.contact-column h4 {
+    color: #ff6600;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-column a {
+    color: #aaaaaa;
+    text-decoration: none;
+    margin-bottom: 6px;
+    transition: color 0.2s ease;
+}
+
+.contact-column a:hover {
+    color: #ffffff;
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-contact-directory {
+        justify-content: center;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .contact-column {
+        align-items: center; /* Center text layouts on mobile views */
+    }
+}

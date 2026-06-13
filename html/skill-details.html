@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoopGodsLibrary | Skill Vault</title>
+    <link rel="stylesheet" href="../styles/main-hub.css">
+    <link rel="stylesheet" href="../styles/skill-details.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo" onclick="window.location.href='main-hub.html'">HoopGods<span>Library</span></div>
+        
+        <div class="view-switcher">
+            <button id="btn-tape" class="switch-btn active" onclick="switchView('tape')">The Tape</button>
+            <button id="btn-lab" class="switch-btn" onclick="switchView('lab')">The Lab</button>
+        </div>
+
+        <nav>
+            <a href="main-hub.html">The Library</a>
+            <a href="#">Legends</a>
+        </nav>
+    </header>
+
+    <main class="vault-container">
+        <div class="skill-header-block">
+            <span id="skill-category" class="category-badge">Loading...</span>
+            <h1 id="skill-title">Loading Skill...</h1>
+        </div>
+
+        <section id="view-tape" class="vault-section active">
+            <h2>Archived Masterpieces</h2>
+            <p class="section-desc">Study raw game footage of the gods executing this move at the highest level.</p>
+            <div class="video-grid" id="archive-video-grid"></div>
+        </section>
+
+        <section id="view-lab" class="vault-section">
+            <h2>The Training Manual</h2>
+            <p class="section-desc">Break down the mechanics, footwork, and drills required to add this to your bag.</p>
+            <div class="tutorial-steps" id="tutorial-steps-container"></div>
+        </section>
+    </main>
+
+    <div id="global-player-container" class="hidden-player">
+        <button id="close-player-btn" onclick="minimizeOrClosePlayer()">&#8592; Exit</button>
+        
+        <div class="iframe-wrapper">
+            <div id="youtube-iframe-placeholder"></div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-credits">
+                <p class="copyright">&copy; 2026 HoopGodsLibrary. All rights reserved.</p>
+                <p class="partnership">Owned by <strong>Emmanuel</strong> &bull; In partnership with <strong>Diamond Hearts Ebenyo</strong> of <span class="brand-highlight">Nexus</span></p>
+            </div>
+            <div class="footer-contact-directory">
+                <div class="contact-column">
+                    <h4>Emmanuel</h4>
+                    <a href="mailto:emkg56@gmail.com">emkg56@gmail.com</a>
+                </div>
+                <div class="contact-column">
+                    <h4>Diamond</h4>
+                    <a href="mailto:diamondheart.ke@gmail.com">diamondheart.ke@gmail.com</a>
+                </div>
+                <div class="contact-column">
+                    <h4>Nexus</h4>
+                    <a href="mailto:nexusai.ke@gmail.com">nexusai.ke@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="../scripts/skill-details.js"></script>
+</body>
+</html>

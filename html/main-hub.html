@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoopGodsLibrary | Main Hub</title>
+    <link rel="stylesheet" href="../styles/main-hub.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">HoopGods<span>Library</span></div>
+        <nav>
+            <a href="#" class="active">The Library</a>
+            <a href="#">Legends</a>
+        </nav>
+    </header>
+
+    <main class="hub-container">
+        <section class="welcome-hero">
+            <h1>THE BLUEPRINT TO GREATNESS</h1>
+            <p>Classifying the signature skills of basketball gods. Pick a bag to unlock.</p>
+        </section>
+
+        <section class="skills-grid">
+            
+            <div class="skill-card" onclick="openSkill('ball-handling')">
+                <span class="category-badge offense">Offense</span>
+                <h3>Ball Handling</h3>
+                <p>Ankle breakers, crossovers, and hesitation moves.</p>
+            </div>
+
+            <div class="skill-card" onclick="openSkill('shot-creation')">
+                <span class="category-badge offense">Offense</span>
+                <h3>Shot Creation</h3>
+                <p>Step-backs, fadeaways, and pull-up mechanics.</p>
+            </div>
+
+            <div class="skill-card" onclick="openSkill('finishing')">
+                <span class="category-badge offense">Offense</span>
+                <h3>Finishing</h3>
+                <p>Floaters, euro-steps, and contact layups.</p>
+            </div>
+
+            <div class="skill-card" onclick="openSkill('perimeter-lockdown')">
+                <span class="category-badge defense">Defense</span>
+                <h3>Perimeter Lockdown</h3>
+                <p>Lateral quickness, pocket stripping, and clamping passing lanes.</p>
+            </div>
+
+            <div class="skill-card" onclick="openSkill('rim-protection')">
+                <span class="category-badge defense">Defense</span>
+                <h3>Rim Protection</h3>
+                <p>Verticality, chase-down blocks, and timing the paint.</p>
+            </div>
+
+            <div class="skill-card" onclick="openSkill('iq-anticipation')">
+                <span class="category-badge defense">Defense</span>
+                <h3>IQ & Anticipation</h3>
+                <p>Drawing charges, reading screens, and weak-side rotations.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-credits">
+                <p class="copyright">&copy; 2026 HoopGodsLibrary. All rights reserved.</p>
+                <p class="partnership">
+                    Owned by <strong>Emmanuel</strong> &bull; In partnership with <strong>Diamond Hearts Ebenyo</strong> of <span class="brand-highlight">Nexus</span>
+                </p>
+            </div>
+
+            <div class="footer-contact-directory">
+                <div class="contact-column">
+                    <h4>Emmanuel</h4>
+                    <a href="mailto:emkg56@gmail.com">emkg56@gmail.com</a>
+                    <a href="https://instagram.com/_manny_m.k" target="_blank">@_manny_m.k</a>
+                </div>
+                
+                <div class="contact-column">
+                    <h4>Diamond</h4>
+                    <a href="mailto:diamondheart.ke@gmail.com">diamondheart.ke@gmail.com</a>
+                    <a href="https://instagram.com/diamond_heartz6" target="_blank">@diamond_heartz6</a>
+                    <a href="https://instagram.com/thee.ghost_rider" target="_blank">@thee.ghost_rider</a>
+                </div>
+
+                <div class="contact-column">
+                    <h4>Nexus</h4>
+                    <a href="mailto:nexusai.ke@gmail.com">nexusai.ke@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openSkill(skillName) {
+            // Sends the user to a page like skill-details.html?skill=ball-handling
+            window.location.href = `skill-details.html?skill=${skillName}`;
+        }
+    </script>
+</body>
+</html>
