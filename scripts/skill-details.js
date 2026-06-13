@@ -5,6 +5,7 @@ const skillDatabase = {
         badgeClass: "offense",
         tape: [
             { title: "Allen Iverson Iconic Crossover on Michael Jordan (1997)", ytId: "2REkZ60b7_c" },
+            { title: "Top 100 Ankle Breakers of All Time", ytId: "zf5_FYV-m6Q" },
             { title: "Kyrie Irving The Most Creative Handles Collective Tape", ytId: "mYyFfD-S8Cw" }
         ],
         lab: [
@@ -71,23 +72,27 @@ function loadSkillData(skillKey) {
 // Global invocation function for clicking ANY video card inside the Library
 function playVideoOnSite(videoId) {
     const container = document.getElementById("global-player-container");
-    
-    // Reset structural layout classes back to primary full screen focus view
     container.className = "fullscreen-mode";
 
     if (ytPlayer === null) {
-        // If player instance doesn't exist, build it using YouTube API
         ytPlayer = new YT.Player('youtube-iframe-placeholder', {
             height: '100%',
             width: '100%',
             videoId: videoId,
-            playerVars: { 'autoplay': 1, 'modestbranding': 1, 'rel': 0 },
+            playerVars: { 
+                'autoplay': 1, 
+                'modestbranding': 1, 
+                'rel': 0,
+                // FORCING THE VALID ORIGIN HEADER HERE:
+                'origin': window.location.origin 
+            },
         });
     } else {
-        // Safe reuse optimization
         ytPlayer.loadVideoById(videoId);
     }
 }
+
+
 
 // Triggers your requested back-arrow design loop logic!
 function minimizeOrClosePlayer() {
